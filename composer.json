@@ -1,5 +1,8 @@
 {
-    "name": "user/brain",
+    "name": "avavax/brain-games",
+    "type": "library",
+    "description": "brain-games package",
+    "license": "MIT",
     "authors": [
         {
             "name": "avavax",
