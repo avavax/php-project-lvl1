@@ -1,0 +1,13 @@
+{
+    "name": "user/brain",
+    "authors": [
+        {
+            "name": "avavax",
+            "email": "ip-media@yandex.ru"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "./brain-games"
+    ]
+}
