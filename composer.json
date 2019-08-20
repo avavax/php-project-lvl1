@@ -2,6 +2,8 @@
     "name": "avavax/brain-games",
     "type": "library",
     "description": "brain-games package",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
     "authors": [
         {
@@ -14,8 +16,14 @@
             "BrainGames\\Cli\\": "src"
         }
     },
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
     },
     "bin": [
         "./brain-games"
