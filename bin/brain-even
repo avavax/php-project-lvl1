@@ -5,6 +5,6 @@
 $autoloadPath = __DIR__ . '/../vendor/autoload.php';
 require_once $autoloadPath;
 
-use function BrainGames\Cli\run;
+use function BrainGames\Even\game;
 
-run();
+game();
