@@ -59,3 +59,4 @@ brain-progression
 ```
 brain-prime
 ```
+![Скрин установки глобально и процесса игры](http://joxi.ru/l2ZdnyJizxYO4r)
