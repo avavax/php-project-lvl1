@@ -1,6 +1,6 @@
 {
     "name": "avavax/brain-games",
-    "type": "library",
+    "type": "project",
     "description": "brain-games package",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -34,10 +34,10 @@
     },
     "bin": [
         "bin/brain-games",
-        "./brain-even",
-        "./brain-calc",
-        "./brain-gcd",
-        "./brain-progression",
-        "./brain-prime"
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ]
 }
