@@ -33,7 +33,7 @@
         "squizlabs/php_codesniffer": "3.*"
     },
     "bin": [
-        "./brain-games",
+        "bin/brain-games",
         "./brain-even",
         "./brain-calc",
         "./brain-gcd",

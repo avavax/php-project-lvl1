@@ -6,37 +6,56 @@
 
 Подборка консольных мини-игр на PHP
 ##
+### Пример игрового процесса:
+    $ brain-calc
+
+    Welcome to the Brain Game!
+    What is the result of the expression?
+
+    May i have your name?: Zeus
+    Hello, Zeus!
+    Question: 8 - 2: 6
+    Your answer: 6
+    Correct!
+    Question: 6 * 7: 42
+    Your answer: 42
+    Correct!
+    Question: 3 * 2: 6
+    Your answer: 6
+    Correct!
+    Congratulations,Zeus!
+
+##
+Установка
+```
+composer global create-project avavax/brain-games
+```
 Игра "Чёт-нечет"
 Пользователь должен определить, чётное введённое число или нет
 ```
-bin/brain-even
+brain-even
 ```
 ##
 Игра "Калькулятор"
 Пользователь должен ввести ответ на простой арифметический пример
 ```
-bin/brain-calc
+brain-calc
 ```
 ##
 Игра "Наибольший общий делитель"
 Пользователь должен ввести НОД двух чисел
 ```
-bin/brain-gcd
+brain-gcd
 ```
 ##
 Игра "Прогрессия"
 Пользователь должен указать пропущенное число прогрессии
 ```
-bin/brain-progression
+brain-progression
 ```
 ##
 Игра "Простое число"
 Пользователь должен ответить, является ли число простым или нет
 ```
-bin/brain-prime
-```
-##
-Установка
-```
-composer install
+brain-prime
 ```
