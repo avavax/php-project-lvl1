@@ -12,8 +12,8 @@
     Welcome to the Brain Game!
     What is the result of the expression?
 
-    May i have your name?: Zeus
-    Hello, Zeus!
+    May i have your name?: ilk
+    Hello, ilk!
     Question: 8 - 2: 6
     Your answer: 6
     Correct!
@@ -23,7 +23,7 @@
     Question: 3 * 2: 6
     Your answer: 6
     Correct!
-    Congratulations,Zeus!
+    Congratulations, ilk!
 
 ##
 Установка
