@@ -4,11 +4,14 @@ namespace BrainGames\Games\Calc;
 
 use function \BrainGames\Engine\run;
 
+/**
+ * Запуск игры с настройками
+ */
 function game()
 {
     $generateQuestion = function () : array {
-        $first = rand(0, 10);
-        $second = rand(0, 10);
+        $first = rand(0, 100);
+        $second = rand(0, 100);
         $operation = rand(1, 3);
         switch ($operation) {
             case 1:

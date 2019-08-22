@@ -4,6 +4,9 @@ namespace BrainGames\Games\Even;
 
 use function \BrainGames\Engine\run;
 
+/**
+ * Запуск игры с настройками
+ */
 function game()
 {
     $generateQuestion = function () : array {
