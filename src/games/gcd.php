@@ -3,6 +3,7 @@
 namespace BrainGames\Games\Gcd;
 
 use function \BrainGames\Engine\run;
+use function \BrainGames\Lib\Math\gcd;
 
 /**
  * Запуск игры с настройками
@@ -22,17 +23,4 @@ function game()
     $ansCondition = '';
 
     run($generateQuestion, $description, $ansCondition);
-}
-
-/**
- * Наибольший общий делитель
- *
- * @param int $a первое число
- * @param int $b второе число
- *
- * @return int НОД
- */
-function gcd(int $a, int $b) : int
-{
-    return ($a % $b) ? gcd($b, $a % $b) : abs($b);
 }

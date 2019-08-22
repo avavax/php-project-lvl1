@@ -12,17 +12,15 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "BrainGames\\Cli\\": "src",
-            "BrainGames\\Even\\": "src"
-        },
         "files": [
             "src/cli.php",
             "src/engine.php",
+            "src/lib/math.php",
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/gcd.php",
-            "src/games/progression.php"
+            "src/games/progression.php",
+            "src/games/prime.php"
         ]
     },
     "scripts": {
@@ -39,6 +37,7 @@
         "./brain-even",
         "./brain-calc",
         "./brain-gcd",
-        "./brain-progression"
+        "./brain-progression",
+        "./brain-prime"
     ]
 }

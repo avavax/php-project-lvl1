@@ -3,6 +3,7 @@
 namespace BrainGames\Games\Progression;
 
 use function \BrainGames\Engine\run;
+use function \BrainGames\Lib\Math\progression;
 
 /**
  * Запуск игры с настройками
@@ -23,20 +24,4 @@ function game()
     $ansCondition = '';
 
     run($generateQuestion, $description, $ansCondition);
-}
-
-/**
- * Получение числового ряда с пропуском в виде строки
- *
- * @param int $first начальное число
- * @param int $step  шаг
- * @param int $space место пропуска
- *
- * @return string
- */
-function progression(int $first, int $step, int $space) : string
-{
-    $arr = range($first, $first + $step * 9, $step);
-    $arr[$space] = '..';
-    return implode(' ', $arr);
 }

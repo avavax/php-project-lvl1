@@ -4,7 +4,6 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8aad46151e8622706d06/test_coverage)](https://codeclimate.com/github/avavax/php-project-lvl1/test_coverage)
 [![Build Status](https://travis-ci.org/avavax/php-project-lvl1.svg?branch=master)](https://travis-ci.org/avavax/php-project-lvl1)
 
-##
 Подборка консольных мини-игр на PHP
 ##
 Игра "Чёт-нечет"
@@ -19,6 +18,12 @@ bin/brain-even
 bin/brain-calc
 ```
 ##
+Игра "Наибольший общий делитель"
+Пользователь должен ввести НОД двух чисел
+```
+bin/brain-gcd
+```
+##
 Игра "Прогрессия"
 Пользователь должен указать пропущенное число прогрессии
 ```
@@ -30,7 +35,7 @@ bin/brain-progression
 ```
 bin/brain-prime
 ```
-###
+##
 Установка
 ```
 composer install
