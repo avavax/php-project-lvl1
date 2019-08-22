@@ -44,7 +44,7 @@ function congratulateFin(string $name)
  * @param string $questText    текст вопроса
  * @param string $ansCondition условия ответа
  *
- * @return string               ответ пользователя
+ * @return string              ответ пользователя
  */
 function request(string $questText, string $ansCondition = '') : string
 {
@@ -58,7 +58,7 @@ function request(string $questText, string $ansCondition = '') : string
  *
  * @param string $description описание игры
  *
- * @return string              имя пользователя
+ * @return string имя пользователя
  */
 function greeting(string $description) : string
 {
