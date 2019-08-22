@@ -5,6 +5,6 @@
 $autoloadPath = __DIR__ . '/../vendor/autoload.php';
 require_once $autoloadPath;
 
-use function BrainGames\Games\Even\game;
+use function BrainGames\Games\Calc\game;
 
 game();
