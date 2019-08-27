@@ -3,7 +3,11 @@
 namespace BrainGames\Games\Prime;
 
 use function \BrainGames\Engine\run;
-use function \BrainGames\Lib\Math\isSimple;
+
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const ANSWER_CONDITION = '[yes / no]';
+const MIN = 0;
+const MAX = 100;
 
 /**
  * Запуск игры с настройками
@@ -11,14 +15,30 @@ use function \BrainGames\Lib\Math\isSimple;
 function game()
 {
     $generateQuestion = function () : array {
-        $quest = rand(0, 100);
-        $ans = isSimple($quest) ? 'yes' : 'no';
-        return [$quest, $ans];
+        $question = rand(MIN, MAX);
+        $answer = isSimple($question) ? 'yes' : 'no';
+        return [$question, $answer];
     };
 
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+    run($generateQuestion, DESCRIPTION, ANSWER_CONDITION);
+}
 
-    $ansCondition = '[yes / no]';
-
-    run($generateQuestion, $description, $ansCondition);
+/**
+ * Проверка на простое число
+ *
+ * @param int $num
+ *
+ * @return boolean
+ */
+function isSimple(int $num) : bool
+{
+    if ($num <= 1) {
+        return false;
+    }
+    for ($i = 2; $i <= $num / 2; $i++) {
+        if ($num % $i == 0) {
+            return false;
+        }
+    }
+    return true;
 }

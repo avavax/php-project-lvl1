@@ -3,7 +3,10 @@
 namespace BrainGames\Games\Gcd;
 
 use function \BrainGames\Engine\run;
-use function \BrainGames\Lib\Math\gcd;
+
+const DESCRIPTION = 'Find the greatest common divisor of given numbers';
+const MIN = 0;
+const MAX = 100;
 
 /**
  * Запуск игры с настройками
@@ -11,16 +14,25 @@ use function \BrainGames\Lib\Math\gcd;
 function game()
 {
     $generateQuestion = function () : array {
-        $first = rand(0, 100);
-        $second = rand(0, 100);
-        $quest = "{$first} {$second}";
-        $ans = gcd($first, $second);
-        return [$quest, $ans];
+        $first = rand(MIN, MAX);
+        $second = rand(MIN, MAX);
+        $question = "{$first} {$second}";
+        $answer = gcd($first, $second);
+        return [$question, $answer];
     };
 
-    $description = 'Find the greatest common divisor of given numbers';
+    run($generateQuestion, DESCRIPTION);
+}
 
-    $ansCondition = '';
-
-    run($generateQuestion, $description, $ansCondition);
+/**
+ * Наибольший общий делитель
+ *
+ * @param int $a
+ * @param int $b
+ *
+ * @return int НОД
+ */
+function gcd(int $a, int $b) : int
+{
+    return ($a % $b) ? gcd($b, $a % $b) : abs($b);
 }

@@ -4,35 +4,35 @@ namespace BrainGames\Games\Calc;
 
 use function \BrainGames\Engine\run;
 
+const DESCRIPTION = 'What is the result of the expression?';
+const MIN = 0;
+const MAX = 100;
+
 /**
  * Запуск игры с настройками
  */
 function game()
 {
     $generateQuestion = function () : array {
-        $first = rand(0, 100);
-        $second = rand(0, 100);
+        $first = rand(MIN, MAX);
+        $second = rand(MIN, MAX);
         $operation = rand(1, 3);
         switch ($operation) {
             case 1:
-                $quest = "{$first} + {$second}";
-                $ans = $first + $second;
+                $question = "{$first} + {$second}";
+                $answer = $first + $second;
                 break;
             case 2:
-                $quest = "{$first} - {$second}";
-                $ans = $first - $second;
+                $question = "{$first} - {$second}";
+                $answer = $first - $second;
                 break;
             case 3:
-                $quest = "{$first} * {$second}";
-                $ans = $first * $second;
+                $question = "{$first} * {$second}";
+                $answer = $first * $second;
                 break;
         }
-        return [$quest, $ans];
+        return [$question, $answer];
     };
 
-    $description = 'What is the result of the expression?';
-
-    $ansCondition = '';
-
-    run($generateQuestion, $description, $ansCondition);
+    run($generateQuestion, DESCRIPTION);
 }

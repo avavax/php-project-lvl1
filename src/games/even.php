@@ -4,20 +4,33 @@ namespace BrainGames\Games\Even;
 
 use function \BrainGames\Engine\run;
 
+const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no"!';
+const ANSWER_CONDITION = '[yes / no]';
+const MIN = 0;
+const MAX = 1000;
+
 /**
  * Запуск игры с настройками
  */
 function game()
 {
     $generateQuestion = function () : array {
-        $quest = rand(0, 1000);
-        $ans = ($quest % 2 === 0) ? 'yes' : 'no';
-        return [$quest, $ans];
+        $question = rand(MIN, MAX);
+        $answer = isEven($question) ? 'yes' : 'no';
+        return [$question, $answer];
     };
 
-    $description = 'Answer "yes" if number even otherwise answer "no"!';
+    run($generateQuestion, DESCRIPTION, ANSWER_CONDITION);
+}
 
-    $ansCondition = '[yes / no]';
-
-    run($generateQuestion, $description, $ansCondition);
+/**
+ * Проверка на чётность
+ *
+ * @param int $number
+ *
+ * @return boolean
+ */
+function isEven(int $number) : bool
+{
+    return $number % 2 === 0;
 }

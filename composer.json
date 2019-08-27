@@ -2,7 +2,6 @@
     "name": "avavax/brain-games",
     "type": "project",
     "description": "brain-games package",
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "license": "MIT",
     "authors": [
@@ -13,9 +12,8 @@
     ],
     "autoload": {
         "files": [
-            "src/cli.php",
             "src/engine.php",
-            "src/lib/math.php",
+            "src/lib/services.php",
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/gcd.php",
@@ -33,7 +31,6 @@
         "squizlabs/php_codesniffer": "3.*"
     },
     "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
